@@ -41,6 +41,16 @@ ansible-playbook playbook.yml -u ubuntu --private-key iac-alura.pem -i hosts.yml
 ### Gerar Chave Pública ssh
 - ssh-keygen       >> ./IaC-Prod  (ex. local onde vai salvar a chave)
 
-
+---
 
 - terraform output (para exibir o IP que foi solicitado pelo main.tf)
+
+---
+
+### playbook.yml
+- Foi adicionado um arquivo playbook para Dev e Outro para Prod, esses arquivos contém as instruções dos passos (tarefas) a serem executadas nas instancias geradas de acordo com as estratégias aplicadas incluindo a rota (IP) e etc.
+
+- Quando executar o comando do ansible precisa ser dentro diretorio expecífico (Prod ou Dev) onde haverá o arquivo *main.tf*
+
+° Ex Prod:
+- ansible-playbook env/Prod/playbook.yml -i infra/hosts.yml -u ubuntu --private-key env/Prod/IaC-Prod
