@@ -1,4 +1,5 @@
 # TUTORIAL PARA USAR O TERRAFORM E ANSIBLE
+### Versão Basic (Instancia por instancia)
 
 Terraform: Cria as maquinas (AWS) de forma automatizada
 Ansible: Faz alteração dentro da maquina (AWS) sem precisar ficar destruindo a maquina e subindo outra (como aconteceria com o Terraform)
